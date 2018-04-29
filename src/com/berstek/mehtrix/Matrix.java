@@ -69,4 +69,26 @@ public class Matrix {
     }
     return matrix;
   }
+
+  public Matrix multDotProduct(Matrix m) {
+    Matrix result = null;
+
+    if (rows == m.cols || cols == m.rows) {
+      result = new Matrix(rows, m.cols);
+
+      for (int i = 0; i < result.rows; i++) {
+        for (int j = 0; j < result.cols; j++) {
+          float sum = 0;
+          for (int k = 0; k < cols; k++) {
+            sum += (matrix[i][k]) * (m.matrix[k][j]);
+          }
+          result.matrix[i][j] = sum;
+        }
+      }
+    } else {
+      System.out.println("Column or row mismatch");
+    }
+
+    return result;
+  }
 }
