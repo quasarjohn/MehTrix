@@ -1,8 +1,10 @@
 package com.berstek.mehtrix;
 
+import java.util.concurrent.ThreadLocalRandom;
+
 public class Matrix {
 
-  private int rows, cols;
+  int rows, cols;
 
   float[][] matrix;
 
@@ -11,6 +13,14 @@ public class Matrix {
 
     this.rows = rows;
     this.cols = cols;
+  }
+
+  public void randomize() {
+    for (int i = 0; i < rows; i++) {
+      for (int j = 0; j < cols; j++) {
+        matrix[i][j] = ThreadLocalRandom.current().nextInt(-10, 10);
+      }
+    }
   }
 
   public void printValue() {
@@ -22,19 +32,41 @@ public class Matrix {
     }
   }
 
-  public void addScalar(float n) {
+  public float[][] addScalar(float n) {
     for (int i = 0; i < rows; i++) {
       for (int j = 0; j < cols; j++) {
         matrix[i][j] += n;
       }
     }
+
+    return matrix;
   }
 
-  public void multScalar(float n) {
+  public float[][] addElementWise(Matrix m) {
+    for (int i = 0; i < rows; i++) {
+      for (int j = 0; j < cols; j++) {
+        matrix[i][j] += m.matrix[i][j];
+      }
+    }
+    return matrix;
+  }
+
+  public float[][] multScalar(float n) {
     for (int i = 0; i < rows; i++) {
       for (int j = 0; j < cols; j++) {
         matrix[i][j] *= n;
       }
     }
+
+    return matrix;
+  }
+
+  public float[][] multElementWise(Matrix m) {
+    for (int i = 0; i < rows; i++) {
+      for (int j = 0; j < cols; j++) {
+        matrix[i][j] *= m.matrix[i][j];
+      }
+    }
+    return matrix;
   }
 }
