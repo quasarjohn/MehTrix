@@ -8,13 +8,10 @@ public class Main {
     a.printValue();
     System.out.println();
 
+    a = a.transpose();
+    a.printValue();
 
-    Matrix b = new Matrix(3, 2);
-    b.randomize();
-    b.printValue();
-    System.out.println();
 
-    Matrix c = a.multDotProduct(b);
-    c.printValue();
+
   }
 }

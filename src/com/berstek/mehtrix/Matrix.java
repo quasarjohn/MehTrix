@@ -1,15 +1,16 @@
 package com.berstek.mehtrix;
 
 import java.util.concurrent.ThreadLocalRandom;
+import java.util.function.Function;
 
 public class Matrix {
 
   int rows, cols;
 
-  float[][] matrix;
+  float[][] data;
 
   public Matrix(int rows, int cols) {
-    matrix = new float[rows][cols];
+    data = new float[rows][cols];
 
     this.rows = rows;
     this.cols = cols;
@@ -18,7 +19,7 @@ public class Matrix {
   public void randomize() {
     for (int i = 0; i < rows; i++) {
       for (int j = 0; j < cols; j++) {
-        matrix[i][j] = ThreadLocalRandom.current().nextInt(-10, 10);
+        data[i][j] = ThreadLocalRandom.current().nextInt(-10, 10);
       }
     }
   }
@@ -26,63 +27,82 @@ public class Matrix {
   public void printValue() {
     for (int i = 0; i < rows; i++) {
       for (int j = 0; j < cols; j++) {
-        System.out.print(matrix[i][j] + ", ");
+        System.out.print(data[i][j] + ", ");
       }
       System.out.println();
     }
   }
 
-  public float[][] addScalar(float n) {
+  //applies a function to every content of the matrix
+  public void mapFunction(Function<Float, Float> fun) {
     for (int i = 0; i < rows; i++) {
       for (int j = 0; j < cols; j++) {
-        matrix[i][j] += n;
+        data[i][j] = fun.apply(data[i][j]);
+      }
+    }
+  }
+
+  public static Matrix addScalar(Matrix m, float n) {
+    Matrix result = new Matrix(m.rows, m.cols);
+    result.data = m.data;
+
+    for (int i = 0; i < m.rows; i++) {
+      for (int j = 0; j < m.cols; j++) {
+        result.data[i][j] += n;
       }
     }
 
-    return matrix;
+    return result;
   }
 
-  public float[][] addElementWise(Matrix m) {
-    for (int i = 0; i < rows; i++) {
-      for (int j = 0; j < cols; j++) {
-        matrix[i][j] += m.matrix[i][j];
+  public static Matrix addElementWise(Matrix l, Matrix m) {
+    Matrix result = new Matrix(l.rows, l.cols);
+    result.data = l.data;
+
+    for (int i = 0; i < l.rows; i++) {
+      for (int j = 0; j < l.cols; j++) {
+        result.data[i][j] += m.data[i][j];
       }
     }
-    return matrix;
+    return result;
   }
 
-  public float[][] multScalar(float n) {
-    for (int i = 0; i < rows; i++) {
-      for (int j = 0; j < cols; j++) {
-        matrix[i][j] *= n;
+  public static Matrix multScalar(Matrix m, float n) {
+    Matrix result = new Matrix(m.rows, m.cols);
+    result.data = m.data;
+
+    for (int i = 0; i < m.rows; i++) {
+      for (int j = 0; j < m.cols; j++) {
+        result.data[i][j] *= n;
       }
     }
 
-    return matrix;
+    return result;
   }
 
-  public float[][] multElementWise(Matrix m) {
-    for (int i = 0; i < rows; i++) {
-      for (int j = 0; j < cols; j++) {
-        matrix[i][j] *= m.matrix[i][j];
+  public static Matrix multElementWise(Matrix l, Matrix m) {
+    Matrix result = new Matrix(l.rows, l.cols);
+    for (int i = 0; i < l.rows; i++) {
+      for (int j = 0; j < l.cols; j++) {
+        result.data[i][j] *= m.data[i][j];
       }
     }
-    return matrix;
+    return result;
   }
 
-  public Matrix multDotProduct(Matrix m) {
+  public static Matrix multDotProduct(Matrix l, Matrix m) {
     Matrix result = null;
 
-    if (rows == m.cols || cols == m.rows) {
-      result = new Matrix(rows, m.cols);
+    if (l.rows == m.cols || l.cols == m.rows) {
+      result = new Matrix(l.rows, m.cols);
 
       for (int i = 0; i < result.rows; i++) {
         for (int j = 0; j < result.cols; j++) {
           float sum = 0;
-          for (int k = 0; k < cols; k++) {
-            sum += (matrix[i][k]) * (m.matrix[k][j]);
+          for (int k = 0; k < l.cols; k++) {
+            sum += (l.data[i][k]) * (m.data[k][j]);
           }
-          result.matrix[i][j] = sum;
+          result.data[i][j] = sum;
         }
       }
     } else {
@@ -91,4 +111,18 @@ public class Matrix {
 
     return result;
   }
+
+  public static Matrix transpose(Matrix m) {
+    Matrix result = new Matrix(m.cols, m.rows);
+
+    for (int i = 0; i < result.rows; i++) {
+      for (int j = 0; j < result.cols; j++) {
+        result.data[i][j] = m.data[j][i];
+      }
+    }
+
+    return result;
+
+  }
+
 }
