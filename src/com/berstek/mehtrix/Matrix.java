@@ -16,10 +16,21 @@ public class Matrix {
     this.cols = cols;
   }
 
+  public Matrix(float[] input) {
+    this.rows = input.length;
+    this.cols = 1;
+
+    data = new float[input.length][1];
+
+    for (int i = 0; i < input.length; i++) {
+      data[i][0] = input[i];
+    }
+  }
+
   public void randomize() {
     for (int i = 0; i < rows; i++) {
       for (int j = 0; j < cols; j++) {
-        data[i][j] = ThreadLocalRandom.current().nextInt(-10, 10);
+        data[i][j] = (float) ThreadLocalRandom.current().nextDouble(-1, 1);
       }
     }
   }
@@ -57,11 +68,21 @@ public class Matrix {
 
   public static Matrix addElementWise(Matrix l, Matrix m) {
     Matrix result = new Matrix(l.rows, l.cols);
-    result.data = l.data;
 
     for (int i = 0; i < l.rows; i++) {
       for (int j = 0; j < l.cols; j++) {
-        result.data[i][j] += m.data[i][j];
+        result.data[i][j] = l.data[i][j] + m.data[i][j];
+      }
+    }
+    return result;
+  }
+
+  public static Matrix subtractElementWise(Matrix l, Matrix m) {
+    Matrix result = new Matrix(l.rows, l.cols);
+
+    for (int i = 0; i < l.rows; i++) {
+      for (int j = 0; j < l.cols; j++) {
+        result.data[i][j] = l.data[i][j] - m.data[i][j];
       }
     }
     return result;
@@ -125,4 +146,27 @@ public class Matrix {
 
   }
 
+  public int getRows() {
+    return rows;
+  }
+
+  public void setRows(int rows) {
+    this.rows = rows;
+  }
+
+  public int getCols() {
+    return cols;
+  }
+
+  public void setCols(int cols) {
+    this.cols = cols;
+  }
+
+  public float[][] getData() {
+    return data;
+  }
+
+  public void setData(float[][] data) {
+    this.data = data;
+  }
 }

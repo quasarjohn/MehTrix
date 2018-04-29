@@ -2,11 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5dd617e4-488c-489b-93f1-a344169ed4b7" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/dictionaries/Berstek.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/MehTrix/com/berstek/mehtrix/Main.class" afterPath="$PROJECT_DIR$/out/production/MehTrix/com/berstek/mehtrix/Main.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/MehTrix/com/berstek/mehtrix/Matrix.class" afterPath="$PROJECT_DIR$/out/production/MehTrix/com/berstek/mehtrix/Matrix.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/berstek/mehtrix/Main.java" afterPath="$PROJECT_DIR$/src/com/berstek/mehtrix/Main.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/berstek/mehtrix/Matrix.java" afterPath="$PROJECT_DIR$/src/com/berstek/mehtrix/Matrix.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -22,19 +19,29 @@
       <file leaf-file-name="Matrix.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/berstek/mehtrix/Matrix.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="570">
-              <caret line="114" column="43" lean-forward="true" selection-start-line="114" selection-start-column="43" selection-end-line="114" selection-end-column="43" />
+            <state relative-caret-position="-315">
+              <caret line="0" column="23" lean-forward="false" selection-start-line="0" selection-start-column="23" selection-end-line="0" selection-end-column="23" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="method#Matrix#0;class#Matrix#0" expanded="false" />
-                <element signature="method#randomize#0;class#Matrix#0" expanded="false" />
                 <element signature="method#printValue#0;class#Matrix#0" expanded="false" />
                 <element signature="method#mapFunction#0;class#Matrix#0" expanded="false" />
                 <element signature="method#addScalar#0;class#Matrix#0" expanded="false" />
-                <element signature="method#addElementWise#0;class#Matrix#0" expanded="false" />
                 <element signature="method#multScalar#0;class#Matrix#0" expanded="false" />
                 <element signature="method#multElementWise#0;class#Matrix#0" expanded="false" />
                 <element signature="method#multDotProduct#0;class#Matrix#0" expanded="false" />
+                <element signature="method#transpose#0;class#Matrix#0" expanded="false" />
+                <element signature="e#3399#3400#0" expanded="true" />
+                <element signature="e#3420#3421#0" expanded="true" />
+                <element signature="e#3455#3456#0" expanded="true" />
+                <element signature="e#3481#3482#0" expanded="true" />
+                <element signature="e#3507#3508#0" expanded="true" />
+                <element signature="e#3528#3529#0" expanded="true" />
+                <element signature="e#3563#3564#0" expanded="true" />
+                <element signature="e#3589#3590#0" expanded="true" />
+                <element signature="e#3621#3622#0" expanded="true" />
+                <element signature="e#3642#3643#0" expanded="true" />
+                <element signature="e#3683#3684#0" expanded="true" />
+                <element signature="e#3709#3710#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -269,7 +276,7 @@
       <workItem from="1524931684622" duration="723000" />
       <workItem from="1524981912697" duration="1414000" />
       <workItem from="1524998805376" duration="4157000" />
-      <workItem from="1525005175231" duration="32000" />
+      <workItem from="1525005175231" duration="660000" />
     </task>
     <task id="LOCAL-00001" summary="Element-wise matrix operation">
       <created>1524982712023</created>
@@ -285,11 +292,18 @@
       <option name="project" value="LOCAL" />
       <updated>1525002122478</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Transpose and function mapping">
+      <created>1525005221779</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1525005221779</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="6326000" />
+    <option name="totallyTimeSpent" value="6954000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -333,7 +347,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Element-wise matrix operation" />
     <MESSAGE value="Dot product operation" />
-    <option name="LAST_COMMIT_MESSAGE" value="Dot product operation" />
+    <MESSAGE value="Transpose and function mapping" />
+    <option name="LAST_COMMIT_MESSAGE" value="Transpose and function mapping" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -346,15 +361,25 @@
           <caret line="104" column="26" lean-forward="false" selection-start-line="104" selection-start-column="26" selection-end-line="104" selection-end-column="26" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="method#Matrix#0;class#Matrix#0" expanded="false" />
-            <element signature="method#randomize#0;class#Matrix#0" expanded="false" />
             <element signature="method#printValue#0;class#Matrix#0" expanded="false" />
             <element signature="method#mapFunction#0;class#Matrix#0" expanded="false" />
             <element signature="method#addScalar#0;class#Matrix#0" expanded="false" />
-            <element signature="method#addElementWise#0;class#Matrix#0" expanded="false" />
             <element signature="method#multScalar#0;class#Matrix#0" expanded="false" />
             <element signature="method#multElementWise#0;class#Matrix#0" expanded="false" />
             <element signature="method#multDotProduct#0;class#Matrix#0" expanded="false" />
+            <element signature="method#transpose#0;class#Matrix#0" expanded="false" />
+            <element signature="e#3399#3400#0" expanded="true" />
+            <element signature="e#3420#3421#0" expanded="true" />
+            <element signature="e#3455#3456#0" expanded="true" />
+            <element signature="e#3481#3482#0" expanded="true" />
+            <element signature="e#3507#3508#0" expanded="true" />
+            <element signature="e#3528#3529#0" expanded="true" />
+            <element signature="e#3563#3564#0" expanded="true" />
+            <element signature="e#3589#3590#0" expanded="true" />
+            <element signature="e#3621#3622#0" expanded="true" />
+            <element signature="e#3642#3643#0" expanded="true" />
+            <element signature="e#3683#3684#0" expanded="true" />
+            <element signature="e#3709#3710#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -373,15 +398,25 @@
           <caret line="66" column="22" lean-forward="false" selection-start-line="66" selection-start-column="22" selection-end-line="66" selection-end-column="22" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="method#Matrix#0;class#Matrix#0" expanded="false" />
-            <element signature="method#randomize#0;class#Matrix#0" expanded="false" />
             <element signature="method#printValue#0;class#Matrix#0" expanded="false" />
             <element signature="method#mapFunction#0;class#Matrix#0" expanded="false" />
             <element signature="method#addScalar#0;class#Matrix#0" expanded="false" />
-            <element signature="method#addElementWise#0;class#Matrix#0" expanded="false" />
             <element signature="method#multScalar#0;class#Matrix#0" expanded="false" />
             <element signature="method#multElementWise#0;class#Matrix#0" expanded="false" />
             <element signature="method#multDotProduct#0;class#Matrix#0" expanded="false" />
+            <element signature="method#transpose#0;class#Matrix#0" expanded="false" />
+            <element signature="e#3399#3400#0" expanded="true" />
+            <element signature="e#3420#3421#0" expanded="true" />
+            <element signature="e#3455#3456#0" expanded="true" />
+            <element signature="e#3481#3482#0" expanded="true" />
+            <element signature="e#3507#3508#0" expanded="true" />
+            <element signature="e#3528#3529#0" expanded="true" />
+            <element signature="e#3563#3564#0" expanded="true" />
+            <element signature="e#3589#3590#0" expanded="true" />
+            <element signature="e#3621#3622#0" expanded="true" />
+            <element signature="e#3642#3643#0" expanded="true" />
+            <element signature="e#3683#3684#0" expanded="true" />
+            <element signature="e#3709#3710#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -400,15 +435,25 @@
           <caret line="2" column="13" lean-forward="false" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="method#Matrix#0;class#Matrix#0" expanded="false" />
-            <element signature="method#randomize#0;class#Matrix#0" expanded="false" />
             <element signature="method#printValue#0;class#Matrix#0" expanded="false" />
             <element signature="method#mapFunction#0;class#Matrix#0" expanded="false" />
             <element signature="method#addScalar#0;class#Matrix#0" expanded="false" />
-            <element signature="method#addElementWise#0;class#Matrix#0" expanded="false" />
             <element signature="method#multScalar#0;class#Matrix#0" expanded="false" />
             <element signature="method#multElementWise#0;class#Matrix#0" expanded="false" />
             <element signature="method#multDotProduct#0;class#Matrix#0" expanded="false" />
+            <element signature="method#transpose#0;class#Matrix#0" expanded="false" />
+            <element signature="e#3399#3400#0" expanded="true" />
+            <element signature="e#3420#3421#0" expanded="true" />
+            <element signature="e#3455#3456#0" expanded="true" />
+            <element signature="e#3481#3482#0" expanded="true" />
+            <element signature="e#3507#3508#0" expanded="true" />
+            <element signature="e#3528#3529#0" expanded="true" />
+            <element signature="e#3563#3564#0" expanded="true" />
+            <element signature="e#3589#3590#0" expanded="true" />
+            <element signature="e#3621#3622#0" expanded="true" />
+            <element signature="e#3642#3643#0" expanded="true" />
+            <element signature="e#3683#3684#0" expanded="true" />
+            <element signature="e#3709#3710#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -432,19 +477,29 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/berstek/mehtrix/Matrix.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="570">
-          <caret line="114" column="43" lean-forward="true" selection-start-line="114" selection-start-column="43" selection-end-line="114" selection-end-column="43" />
+        <state relative-caret-position="-315">
+          <caret line="0" column="23" lean-forward="false" selection-start-line="0" selection-start-column="23" selection-end-line="0" selection-end-column="23" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="method#Matrix#0;class#Matrix#0" expanded="false" />
-            <element signature="method#randomize#0;class#Matrix#0" expanded="false" />
             <element signature="method#printValue#0;class#Matrix#0" expanded="false" />
             <element signature="method#mapFunction#0;class#Matrix#0" expanded="false" />
             <element signature="method#addScalar#0;class#Matrix#0" expanded="false" />
-            <element signature="method#addElementWise#0;class#Matrix#0" expanded="false" />
             <element signature="method#multScalar#0;class#Matrix#0" expanded="false" />
             <element signature="method#multElementWise#0;class#Matrix#0" expanded="false" />
             <element signature="method#multDotProduct#0;class#Matrix#0" expanded="false" />
+            <element signature="method#transpose#0;class#Matrix#0" expanded="false" />
+            <element signature="e#3399#3400#0" expanded="true" />
+            <element signature="e#3420#3421#0" expanded="true" />
+            <element signature="e#3455#3456#0" expanded="true" />
+            <element signature="e#3481#3482#0" expanded="true" />
+            <element signature="e#3507#3508#0" expanded="true" />
+            <element signature="e#3528#3529#0" expanded="true" />
+            <element signature="e#3563#3564#0" expanded="true" />
+            <element signature="e#3589#3590#0" expanded="true" />
+            <element signature="e#3621#3622#0" expanded="true" />
+            <element signature="e#3642#3643#0" expanded="true" />
+            <element signature="e#3683#3684#0" expanded="true" />
+            <element signature="e#3709#3710#0" expanded="true" />
           </folding>
         </state>
       </provider>
