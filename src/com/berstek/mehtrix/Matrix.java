@@ -6,36 +6,40 @@ import java.util.function.Function;
 public class Matrix {
 
   int rows, cols;
+  double[][] data;
 
-  float[][] data;
 
   public Matrix(int rows, int cols) {
-    data = new float[rows][cols];
+    data = new double[rows][cols];
 
     this.rows = rows;
     this.cols = cols;
   }
 
-  public Matrix(float[] input) {
+  public Matrix(double[] input) {
     this.rows = input.length;
     this.cols = 1;
 
-    data = new float[input.length][1];
+    data = new double[rows][cols];
 
-    for (int i = 0; i < input.length; i++) {
+    for (int i = 0; i < rows; i++) {
       data[i][0] = input[i];
     }
   }
 
+  //passed
   public void randomize() {
     for (int i = 0; i < rows; i++) {
       for (int j = 0; j < cols; j++) {
-        data[i][j] = (float) ThreadLocalRandom.current().nextDouble(-1, 1);
+        data[i][j] =  ThreadLocalRandom.current().nextDouble(0, 1);
       }
     }
   }
 
+  //passed
   public void printValue() {
+    System.out.println("Matrix " + rows + " : " + cols);
+
     for (int i = 0; i < rows; i++) {
       for (int j = 0; j < cols; j++) {
         System.out.print(data[i][j] + ", ");
@@ -44,8 +48,8 @@ public class Matrix {
     }
   }
 
-  //applies a function to every content of the matrix
-  public void mapFunction(Function<Float, Float> fun) {
+  //passed
+  public void mapFunction(Function<Double, Double> fun) {
     for (int i = 0; i < rows; i++) {
       for (int j = 0; j < cols; j++) {
         data[i][j] = fun.apply(data[i][j]);
@@ -53,19 +57,33 @@ public class Matrix {
     }
   }
 
-  public static Matrix addScalar(Matrix m, float n) {
+  //pass
+  public static Matrix mapFunction(Matrix matrix, Function<Double, Double> fun) {
+    Matrix copy = matrix.copy();
+
+    for (int i = 0; i < copy.rows; i++) {
+      for (int j = 0; j < copy.cols; j++) {
+        copy.data[i][j] = fun.apply(copy.data[i][j]);
+      }
+    }
+
+    return copy;
+  }
+
+  //pass
+  public static Matrix addScalar(Matrix m, double n) {
     Matrix result = new Matrix(m.rows, m.cols);
-    result.data = m.data;
 
     for (int i = 0; i < m.rows; i++) {
       for (int j = 0; j < m.cols; j++) {
-        result.data[i][j] += n;
+        result.data[i][j] = m.data[i][j] + n;
       }
     }
 
     return result;
   }
 
+  //pass
   public static Matrix addElementWise(Matrix l, Matrix m) {
     Matrix result = new Matrix(l.rows, l.cols);
 
@@ -77,6 +95,7 @@ public class Matrix {
     return result;
   }
 
+  //pass
   public static Matrix subtractElementWise(Matrix l, Matrix m) {
     Matrix result = new Matrix(l.rows, l.cols);
 
@@ -88,38 +107,40 @@ public class Matrix {
     return result;
   }
 
-  public static Matrix multScalar(Matrix m, float n) {
+  //pass
+  public static Matrix multScalar(Matrix m, double n) {
     Matrix result = new Matrix(m.rows, m.cols);
-    result.data = m.data;
 
     for (int i = 0; i < m.rows; i++) {
       for (int j = 0; j < m.cols; j++) {
-        result.data[i][j] *= n;
+        result.data[i][j] = m.data[i][j] * n;
       }
     }
 
     return result;
   }
 
+  //pass
   public static Matrix multElementWise(Matrix l, Matrix m) {
     Matrix result = new Matrix(l.rows, l.cols);
     for (int i = 0; i < l.rows; i++) {
       for (int j = 0; j < l.cols; j++) {
-        result.data[i][j] *= m.data[i][j];
+        result.data[i][j] = l.data[i][j] * m.data[i][j];
       }
     }
     return result;
   }
 
+  //pass
   public static Matrix multDotProduct(Matrix l, Matrix m) {
     Matrix result = null;
 
-    if (l.rows == m.cols || l.cols == m.rows) {
+    if (l.cols == m.rows) {
       result = new Matrix(l.rows, m.cols);
 
       for (int i = 0; i < result.rows; i++) {
         for (int j = 0; j < result.cols; j++) {
-          float sum = 0;
+          double sum = 0;
           for (int k = 0; k < l.cols; k++) {
             sum += (l.data[i][k]) * (m.data[k][j]);
           }
@@ -133,6 +154,7 @@ public class Matrix {
     return result;
   }
 
+  //pass
   public static Matrix transpose(Matrix m) {
     Matrix result = new Matrix(m.cols, m.rows);
 
@@ -146,27 +168,16 @@ public class Matrix {
 
   }
 
-  public int getRows() {
-    return rows;
-  }
+  //passed
+  public Matrix copy() {
+    Matrix m = new Matrix(rows, cols);
 
-  public void setRows(int rows) {
-    this.rows = rows;
-  }
+    for (int i = 0; i < rows; i++) {
+      for (int j = 0; j < cols; j++) {
+        m.data[i][j] = data[i][j];
+      }
+    }
 
-  public int getCols() {
-    return cols;
-  }
-
-  public void setCols(int cols) {
-    this.cols = cols;
-  }
-
-  public float[][] getData() {
-    return data;
-  }
-
-  public void setData(float[][] data) {
-    this.data = data;
+    return m;
   }
 }

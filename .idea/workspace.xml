@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5dd617e4-488c-489b-93f1-a344169ed4b7" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/berstek/mehtrix/Matrix.java" afterPath="$PROJECT_DIR$/src/com/berstek/mehtrix/Matrix.java" />
     </list>
@@ -19,29 +18,10 @@
       <file leaf-file-name="Matrix.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/berstek/mehtrix/Matrix.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-315">
-              <caret line="0" column="23" lean-forward="false" selection-start-line="0" selection-start-column="23" selection-end-line="0" selection-end-column="23" />
+            <state relative-caret-position="-2457">
+              <caret line="0" column="25" lean-forward="false" selection-start-line="0" selection-start-column="25" selection-end-line="0" selection-end-column="25" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="method#printValue#0;class#Matrix#0" expanded="false" />
-                <element signature="method#mapFunction#0;class#Matrix#0" expanded="false" />
-                <element signature="method#addScalar#0;class#Matrix#0" expanded="false" />
-                <element signature="method#multScalar#0;class#Matrix#0" expanded="false" />
-                <element signature="method#multElementWise#0;class#Matrix#0" expanded="false" />
-                <element signature="method#multDotProduct#0;class#Matrix#0" expanded="false" />
-                <element signature="method#transpose#0;class#Matrix#0" expanded="false" />
-                <element signature="e#3399#3400#0" expanded="true" />
-                <element signature="e#3420#3421#0" expanded="true" />
-                <element signature="e#3455#3456#0" expanded="true" />
-                <element signature="e#3481#3482#0" expanded="true" />
-                <element signature="e#3507#3508#0" expanded="true" />
-                <element signature="e#3528#3529#0" expanded="true" />
-                <element signature="e#3563#3564#0" expanded="true" />
-                <element signature="e#3589#3590#0" expanded="true" />
-                <element signature="e#3621#3622#0" expanded="true" />
-                <element signature="e#3642#3643#0" expanded="true" />
-                <element signature="e#3683#3684#0" expanded="true" />
-                <element signature="e#3709#3710#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -111,9 +91,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
-      <pane id="Scratches" />
       <pane id="AndroidView" />
+      <pane id="Scratches" />
       <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
@@ -137,6 +116,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -276,7 +256,9 @@
       <workItem from="1524931684622" duration="723000" />
       <workItem from="1524981912697" duration="1414000" />
       <workItem from="1524998805376" duration="4157000" />
-      <workItem from="1525005175231" duration="660000" />
+      <workItem from="1525005175231" duration="1290000" />
+      <workItem from="1525162653086" duration="1188000" />
+      <workItem from="1525271520321" duration="135000" />
     </task>
     <task id="LOCAL-00001" summary="Element-wise matrix operation">
       <created>1524982712023</created>
@@ -299,11 +281,18 @@
       <option name="project" value="LOCAL" />
       <updated>1525005221779</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Static functions and matrix subtraction">
+      <created>1525016955364</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1525016955364</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="6954000" />
+    <option name="totallyTimeSpent" value="8907000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -348,7 +337,8 @@
     <MESSAGE value="Element-wise matrix operation" />
     <MESSAGE value="Dot product operation" />
     <MESSAGE value="Transpose and function mapping" />
-    <option name="LAST_COMMIT_MESSAGE" value="Transpose and function mapping" />
+    <MESSAGE value="Static functions and matrix subtraction" />
+    <option name="LAST_COMMIT_MESSAGE" value="Static functions and matrix subtraction" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -357,29 +347,46 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/com/berstek/mehtrix/Matrix.java">
       <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/berstek/mehtrix/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="231">
+          <caret line="11" column="19" lean-forward="false" selection-start-line="11" selection-start-column="19" selection-end-line="11" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/berstek/mehtrix/Matrix.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/berstek/mehtrix/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="231">
+          <caret line="11" column="19" lean-forward="false" selection-start-line="11" selection-start-column="19" selection-end-line="11" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/berstek/mehtrix/Matrix.java">
+      <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2184">
           <caret line="104" column="26" lean-forward="false" selection-start-line="104" selection-start-column="26" selection-end-line="104" selection-end-column="26" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="method#printValue#0;class#Matrix#0" expanded="false" />
-            <element signature="method#mapFunction#0;class#Matrix#0" expanded="false" />
-            <element signature="method#addScalar#0;class#Matrix#0" expanded="false" />
-            <element signature="method#multScalar#0;class#Matrix#0" expanded="false" />
-            <element signature="method#multElementWise#0;class#Matrix#0" expanded="false" />
-            <element signature="method#multDotProduct#0;class#Matrix#0" expanded="false" />
-            <element signature="method#transpose#0;class#Matrix#0" expanded="false" />
-            <element signature="e#3399#3400#0" expanded="true" />
-            <element signature="e#3420#3421#0" expanded="true" />
-            <element signature="e#3455#3456#0" expanded="true" />
-            <element signature="e#3481#3482#0" expanded="true" />
-            <element signature="e#3507#3508#0" expanded="true" />
-            <element signature="e#3528#3529#0" expanded="true" />
-            <element signature="e#3563#3564#0" expanded="true" />
-            <element signature="e#3589#3590#0" expanded="true" />
-            <element signature="e#3621#3622#0" expanded="true" />
-            <element signature="e#3642#3643#0" expanded="true" />
-            <element signature="e#3683#3684#0" expanded="true" />
-            <element signature="e#3709#3710#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -398,25 +405,6 @@
           <caret line="66" column="22" lean-forward="false" selection-start-line="66" selection-start-column="22" selection-end-line="66" selection-end-column="22" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="method#printValue#0;class#Matrix#0" expanded="false" />
-            <element signature="method#mapFunction#0;class#Matrix#0" expanded="false" />
-            <element signature="method#addScalar#0;class#Matrix#0" expanded="false" />
-            <element signature="method#multScalar#0;class#Matrix#0" expanded="false" />
-            <element signature="method#multElementWise#0;class#Matrix#0" expanded="false" />
-            <element signature="method#multDotProduct#0;class#Matrix#0" expanded="false" />
-            <element signature="method#transpose#0;class#Matrix#0" expanded="false" />
-            <element signature="e#3399#3400#0" expanded="true" />
-            <element signature="e#3420#3421#0" expanded="true" />
-            <element signature="e#3455#3456#0" expanded="true" />
-            <element signature="e#3481#3482#0" expanded="true" />
-            <element signature="e#3507#3508#0" expanded="true" />
-            <element signature="e#3528#3529#0" expanded="true" />
-            <element signature="e#3563#3564#0" expanded="true" />
-            <element signature="e#3589#3590#0" expanded="true" />
-            <element signature="e#3621#3622#0" expanded="true" />
-            <element signature="e#3642#3643#0" expanded="true" />
-            <element signature="e#3683#3684#0" expanded="true" />
-            <element signature="e#3709#3710#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -435,25 +423,6 @@
           <caret line="2" column="13" lean-forward="false" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="method#printValue#0;class#Matrix#0" expanded="false" />
-            <element signature="method#mapFunction#0;class#Matrix#0" expanded="false" />
-            <element signature="method#addScalar#0;class#Matrix#0" expanded="false" />
-            <element signature="method#multScalar#0;class#Matrix#0" expanded="false" />
-            <element signature="method#multElementWise#0;class#Matrix#0" expanded="false" />
-            <element signature="method#multDotProduct#0;class#Matrix#0" expanded="false" />
-            <element signature="method#transpose#0;class#Matrix#0" expanded="false" />
-            <element signature="e#3399#3400#0" expanded="true" />
-            <element signature="e#3420#3421#0" expanded="true" />
-            <element signature="e#3455#3456#0" expanded="true" />
-            <element signature="e#3481#3482#0" expanded="true" />
-            <element signature="e#3507#3508#0" expanded="true" />
-            <element signature="e#3528#3529#0" expanded="true" />
-            <element signature="e#3563#3564#0" expanded="true" />
-            <element signature="e#3589#3590#0" expanded="true" />
-            <element signature="e#3621#3622#0" expanded="true" />
-            <element signature="e#3642#3643#0" expanded="true" />
-            <element signature="e#3683#3684#0" expanded="true" />
-            <element signature="e#3709#3710#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -477,29 +446,10 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/berstek/mehtrix/Matrix.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-315">
-          <caret line="0" column="23" lean-forward="false" selection-start-line="0" selection-start-column="23" selection-end-line="0" selection-end-column="23" />
+        <state relative-caret-position="-2457">
+          <caret line="0" column="25" lean-forward="false" selection-start-line="0" selection-start-column="25" selection-end-line="0" selection-end-column="25" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="method#printValue#0;class#Matrix#0" expanded="false" />
-            <element signature="method#mapFunction#0;class#Matrix#0" expanded="false" />
-            <element signature="method#addScalar#0;class#Matrix#0" expanded="false" />
-            <element signature="method#multScalar#0;class#Matrix#0" expanded="false" />
-            <element signature="method#multElementWise#0;class#Matrix#0" expanded="false" />
-            <element signature="method#multDotProduct#0;class#Matrix#0" expanded="false" />
-            <element signature="method#transpose#0;class#Matrix#0" expanded="false" />
-            <element signature="e#3399#3400#0" expanded="true" />
-            <element signature="e#3420#3421#0" expanded="true" />
-            <element signature="e#3455#3456#0" expanded="true" />
-            <element signature="e#3481#3482#0" expanded="true" />
-            <element signature="e#3507#3508#0" expanded="true" />
-            <element signature="e#3528#3529#0" expanded="true" />
-            <element signature="e#3563#3564#0" expanded="true" />
-            <element signature="e#3589#3590#0" expanded="true" />
-            <element signature="e#3621#3622#0" expanded="true" />
-            <element signature="e#3642#3643#0" expanded="true" />
-            <element signature="e#3683#3684#0" expanded="true" />
-            <element signature="e#3709#3710#0" expanded="true" />
           </folding>
         </state>
       </provider>
